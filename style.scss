@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./image.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  perspective: 100000000px;
+  perspective-origin: left;
+  font-family: "Dosis", sans-serif;
+
+  h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    padding: 90px 0 0 90px;
+    margin: 0;
+  }
+
+  .cube {
+    width: 20vw;
+    margin: auto;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-10vw) rotateY(0deg) rotateX(0deg);
+    left: calc(50% - 10vw);
+    top: calc(50% - 10vw);
+
+    &:after {
+      content: "";
+      display: block;
+      margin-bottom: 100%;
+    }
+  }
+
+  .box {
+    overflow: hidden;
+    position: relative;
+    width: 20vw;
+    position: absolute;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-bottom: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: -40vw;
+      top: calc(-50vh + 10vw);
+    }
+
+    &.front {
+      transform: rotateY(0deg) translateZ(10vw);
+    }
+
+    &.right {
+      transform: rotateY(90deg) translateZ(10vw);
+    }
+
+    &.left {
+      transform: rotateY(-90deg) translateZ(10vw);
+    }
+
+    &.top {
+      transform: rotateX(90deg) translateZ(10vw);
+    }
+
+    &.bottom {
+      transform: rotateX(-90deg) translateZ(10vw);
+    }
+  }
+}

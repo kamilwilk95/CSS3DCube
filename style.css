@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./image.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-perspective: 100000000px;
+          perspective: 100000000px;
+  -webkit-perspective-origin: left;
+          perspective-origin: left;
+  font-family: "Dosis", sans-serif;
+}
+
+body h1 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  padding: 90px 0 0 90px;
+  margin: 0;
+}
+
+body .cube {
+  width: 20vw;
+  margin: auto;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(-10vw) rotateY(0deg) rotateX(0deg);
+          transform: translateZ(-10vw) rotateY(0deg) rotateX(0deg);
+  left: calc(50% - 10vw);
+  top: calc(50% - 10vw);
+}
+
+body .cube:after {
+  content: "";
+  display: block;
+  margin-bottom: 100%;
+}
+
+body .box {
+  overflow: hidden;
+  position: relative;
+  width: 20vw;
+  position: absolute;
+}
+
+body .box:after {
+  content: "";
+  display: block;
+  margin-bottom: 100%;
+}
+
+body .box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: -40vw;
+  top: calc(-50vh + 10vw);
+}
+
+body .box.front {
+  -webkit-transform: rotateY(0deg) translateZ(10vw);
+          transform: rotateY(0deg) translateZ(10vw);
+}
+
+body .box.right {
+  -webkit-transform: rotateY(90deg) translateZ(10vw);
+          transform: rotateY(90deg) translateZ(10vw);
+}
+
+body .box.left {
+  -webkit-transform: rotateY(-90deg) translateZ(10vw);
+          transform: rotateY(-90deg) translateZ(10vw);
+}
+
+body .box.top {
+  -webkit-transform: rotateX(90deg) translateZ(10vw);
+          transform: rotateX(90deg) translateZ(10vw);
+}
+
+body .box.bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(10vw);
+          transform: rotateX(-90deg) translateZ(10vw);
+}
+/*# sourceMappingURL=style.css.map */
