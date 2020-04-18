@@ -26,7 +26,7 @@ body h1 {
   margin: 0;
 }
 
-body .cube {
+.cube {
   width: 20vw;
   margin: auto;
   position: absolute;
@@ -38,57 +38,94 @@ body .cube {
   top: calc(50% - 10vw);
 }
 
-body .cube:after {
+.cube:after {
   content: "";
   display: block;
   margin-bottom: 100%;
 }
 
-body .box {
+.box {
   overflow: hidden;
   position: relative;
   width: 20vw;
   position: absolute;
 }
 
-body .box:after {
+.box:after {
   content: "";
   display: block;
   margin-bottom: 100%;
 }
 
-body .box img {
+.box img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: -40vw;
+  left: calc(-50vw + 10vw);
   top: calc(-50vh + 10vw);
 }
 
-body .box.front {
+.box.front {
   -webkit-transform: rotateY(0deg) translateZ(10vw);
           transform: rotateY(0deg) translateZ(10vw);
 }
 
-body .box.right {
+.box.right {
   -webkit-transform: rotateY(90deg) translateZ(10vw);
           transform: rotateY(90deg) translateZ(10vw);
 }
 
-body .box.left {
+.box.left {
   -webkit-transform: rotateY(-90deg) translateZ(10vw);
           transform: rotateY(-90deg) translateZ(10vw);
 }
 
-body .box.top {
+.box.top {
   -webkit-transform: rotateX(90deg) translateZ(10vw);
           transform: rotateX(90deg) translateZ(10vw);
 }
 
-body .box.bottom {
+.box.bottom {
   -webkit-transform: rotateX(-90deg) translateZ(10vw);
           transform: rotateX(-90deg) translateZ(10vw);
+}
+
+@media (orientation: portrait) {
+  .cube {
+    width: 46vw;
+    -webkit-transform: translateZ(-23vw) rotateY(0deg) rotateX(0deg);
+            transform: translateZ(-23vw) rotateY(0deg) rotateX(0deg);
+    left: calc(50% - 23vw);
+    top: calc(50% - 23vw);
+  }
+  .box {
+    width: 46vw;
+  }
+  .box img {
+    left: calc(-50vw + 23vw);
+    top: calc(-50vh + 23vw);
+  }
+  .box.front {
+    -webkit-transform: rotateY(0deg) translateZ(23vw);
+            transform: rotateY(0deg) translateZ(23vw);
+  }
+  .box.right {
+    -webkit-transform: rotateY(90deg) translateZ(23vw);
+            transform: rotateY(90deg) translateZ(23vw);
+  }
+  .box.left {
+    -webkit-transform: rotateY(-90deg) translateZ(23vw);
+            transform: rotateY(-90deg) translateZ(23vw);
+  }
+  .box.top {
+    -webkit-transform: rotateX(90deg) translateZ(23vw);
+            transform: rotateX(90deg) translateZ(23vw);
+  }
+  .box.bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(23vw);
+            transform: rotateX(-90deg) translateZ(23vw);
+  }
 }
 /*# sourceMappingURL=style.css.map */
