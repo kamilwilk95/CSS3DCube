@@ -21,7 +21,7 @@ body h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-image: linear-gradient(to top, #cfd8df 0%, #e2ebf0 100%);
   padding: 90px 0 0 90px;
   margin: 0;
 }
